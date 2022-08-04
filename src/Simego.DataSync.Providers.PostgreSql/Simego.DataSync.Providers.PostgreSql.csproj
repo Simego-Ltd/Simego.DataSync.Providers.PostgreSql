@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyTitle>Data Sync Connector for PostgreSql</AssemblyTitle>
+    <Product>Data Sync Connector for PostgreSql</Product>
+    <Copyright>Copyright © Simego Ltd 2022</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="6.0.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Simego.DataSync">
+      <HintPath>..\..\3rdParty\Simego.DataSync.dll</HintPath>
+    </Reference>
+    <Reference Include="Simego.DataSync.Providers.Ado">
+      <HintPath>..\..\3rdParty\Simego.DataSync.Providers.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+</Project>
