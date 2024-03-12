@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Simego.DataSync.Providers.PostgreSql
 {
-    [ProviderInfo(Name = "PostgreSql (8.0.1)", Description = "Npgsql for PostgreSql", Group = "SQL")]
+    [ProviderInfo(Name = "PostgreSql (8.0.2)", Description = "Npgsql for PostgreSql", Group = "SQL")]
     public class PostgreSqlDatasourceReader : AdoDataSourceReader
     {
         private Lazy<AdoDbProviderFactory> MyFactory => new Lazy<AdoDbProviderFactory>(() => new AdoDbProviderFactory("Npgsql", GetFactory()));
@@ -17,7 +17,7 @@ namespace Simego.DataSync.Providers.PostgreSql
 
         private static DbProviderFactory GetFactory()
         {
-            var factoryType = typeof(Npgsql.NpgsqlFactory);
+            var factoryType = typeof(PostgreSqlProviderFactory);
 
             return factoryType.InvokeMember(factoryType.Name,
                BindingFlags.CreateInstance | BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public,

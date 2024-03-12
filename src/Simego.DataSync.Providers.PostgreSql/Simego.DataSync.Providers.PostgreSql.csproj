@@ -8,7 +8,7 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Npgsql" Version="8.0.1" />
+    <PackageReference Include="Npgsql" Version="8.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Simego.DataSync.Core">
